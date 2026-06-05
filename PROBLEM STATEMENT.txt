@@ -1,0 +1,5 @@
+PS2: Vital Monitoring with edge ai
+Description:
+A wearable multi-sensor patch that continuously monitors vitals (ECG, SpO₂, hydration, micro-movement etc.,) and sends anomalies to clinicians via edge-AI. Hospitals, home-care providers, and chronic patients benefit.
+USP is ultra-thin batteryless design.
+Scales into hospital platforms and telehealth. SaaS alerts + device sales. Reduces clinic visits, improving energy/resource use.

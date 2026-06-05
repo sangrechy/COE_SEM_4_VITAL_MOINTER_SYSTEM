@@ -1,0 +1,39 @@
+.
+├── dataset
+├── PROBLEM STATEMENT.txt
+├── project_data
+│   └── POWER SUPPLY CHART.txt
+├── project_structure.txt
+├── report
+└── v1
+    ├── ml
+    │   ├── v1
+    │   │   ├── extract_features.py
+    │   │   ├── features.csv
+    │   │   ├── live_predict.py
+    │   │   ├── predict_test.py
+    │   │   ├── rf_model.pkl
+    │   │   ├── save_model.py
+    │   │   ├── test_load.py
+    │   │   └── train_rf.py
+    │   ├── v2
+    │   │   ├── ecg_features.csv
+    │   │   ├── ecg_rf_model.pkl
+    │   │   ├── extract_ecg_features.py
+    │   │   ├── save_ecg_rf.py
+    │   │   └── train_ecg_rf.py
+    │   └── v3
+    │       ├── dashboard
+    │       ├── dataset
+    │       ├── docs
+    │       ├── esp32
+    │       ├── models
+    │       └── scripts
+    └── TEST UI
+        ├── esp32_code.ino
+        ├── requirements.txt
+        ├── server.py
+        └── templates
+            └── index.html
+
+17 directories, 20 files

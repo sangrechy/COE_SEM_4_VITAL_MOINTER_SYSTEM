@@ -1,0 +1,93 @@
+POWER SUPPLY CHART:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. SLEEP MODE:
+
+| Component         | State             | Approx Current |
+| ----------------- | ----------------- | -------------- |
+| ESP32-S3          | Deep Sleep        | ~10 TO 150µA   |
+| AD8232 ECG Sensor | Low-power standby | ~170µA         |
+| MAX30102 Sensor   | Shutdown          | ~0.7µA         |
+| MPU6050 Sensor    | Sleep             | ~10µA          |
+| AF4300V           | Low-power         | ~10 TO 100µA   |
+
+TOTAL:
+~0.20mA TO ~0.45mA
+
+POWER:
+~0.66mW TO ~1.48mW
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. NORMAL MODE (DATA COLLECTION):
+
+| Component         | State             | Approx Current |
+| ----------------- | ----------------- | -------------- |
+| ESP32-S3          | Active sensing    | ~20 TO 40mA    |
+| AD8232 ECG Sensor | ECG acquisition   | ~0.17mA        |
+| MAX30102 Sensor   | PPG active        | ~5 TO 15mA     |
+| MPU6050 Sensor    | Motion tracking   | ~3 TO 5mA      |
+| AF4300V           | Hydration sensing | ~1 TO 5mA      |
+
+TOTAL:
+~30mA TO ~65mA
+
+POWER:
+~100mW TO ~215mW
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. HIGH MODE (AI PROCESSING):
+
+| Component         | State             | Approx Current |
+| ----------------- | ----------------- | -------------- |
+| ESP32-S3          | High CPU/AI load  | ~60 TO 120mA   |
+| AD8232 ECG Sensor | Active            | ~0.17mA        |
+| MAX30102 Sensor   | Active            | ~5 TO 15mA     |
+| MPU6050 Sensor    | Active            | ~3 TO 5mA      |
+| AF4300V           | Active            | ~1 TO 5mA      |
+
+TOTAL:
+~70mA TO ~145mA
+
+POWER:
+~230mW TO ~480mW
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. PEAK MODE (AI + COLLECTION + BLE):
+
+| Component         | State         | Approx Current |
+| ----------------- | ------------- | -------------- |
+| ESP32-S3          | AI + BLE TX   | ~70 TO 140mA   |
+| AD8232 ECG Sensor | Active        | ~0.17mA        |
+| MAX30102 Sensor   | Active        | ~5 TO 20mA     |
+| MPU6050 Sensor    | Active        | ~3 TO 5mA      |
+| AF4300V           | Active        | ~1 TO 5mA      |
+
+TOTAL:
+~80mA TO ~160mA
+
+POWER:
+~264mW TO ~528mW
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. PEAK MODE (AI + COLLECTION + WIFI):
+
+| Component         | State          | Approx Current |
+| ----------------- | -------------- | -------------- |
+| ESP32-S3          | AI + WiFi TX   | ~200 TO 350mA  |
+| AD8232 ECG Sensor | Active         | ~0.17mA        |
+| MAX30102 Sensor   | Active         | ~5 TO 20mA     |
+| MPU6050 Sensor    | Active         | ~3 TO 5mA      |
+| AF4300V           | Active         | ~1 TO 5mA      |
+
+TOTAL:
+~220mA TO ~370mA
+
+POWER:
+~726mW TO ~1.22W
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

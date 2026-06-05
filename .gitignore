@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# ML Models
+*.pkl
+*.joblib
+
+# Raw Datasets
+dataset/mitbih_raw/
+dataset/wesad_raw/
+
+# Generated Files
+*.csv
+
+# Virtual Environments
+venv/
+.venv/
+
+# IDE
+.vscode/
+
+# Logs
+*.log
+
