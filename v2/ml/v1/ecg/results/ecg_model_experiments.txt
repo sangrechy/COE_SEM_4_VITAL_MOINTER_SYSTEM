@@ -1,0 +1,16 @@
+ECG Multiclass Model Experiments
+
+200 Trees
+Accuracy: 88.89%
+Size: 369 MB
+
+25 Trees, Depth 12, Leaf 5
+Accuracy: 86.9%
+Size: 5.6 MB
+
+12 Trees, Depth 9, Leaf 15
+Accuracy: 83.0%
+Size: 721 KB
+
+18 Trees, Depth 10, Leaf 10
+Status: Testing
