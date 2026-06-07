@@ -52,23 +52,7 @@ for rec in records:
 
             # Normal beat = 0
             # Any abnormal beat = 1
-            if symbol == "N":
-                label = 0
-
-            elif symbol in ["V", "E"]:
-                label = 1
-
-            elif symbol in ["A", "a", "J", "S"]:
-                label = 2
-
-            elif symbol == "L":
-                label = 3
-
-            elif symbol == "R":
-                label = 4
-
-            else:
-                label = 5
+            label = 0 if symbol == "N" else 1
 
             rows.append([
                 rr,
