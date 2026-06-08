@@ -1,14 +1,15 @@
-#include <stdio.h>
+#include "ecg_predict.h"
 
 #include "v2/ml/v1/ecg/results/ecg_forest_export.c"
 
-int predict_tree(
+static int predict_tree(
     const int *feature,
     const float *threshold,
     const int *left,
     const int *right,
     const int *value,
-    float x[])
+    float x[]
+)
 {
     int node = 0;
 
@@ -23,15 +24,19 @@ int predict_tree(
     return value[node];
 }
 
-int main()
+int ecg_predict(
+    float rr_interval,
+    float peak_amp,
+    float beat_std,
+    float beat_energy
+)
 {
-    float sample[4] =
-    {
-        40.0,
-        0.10,
-        0.05,
-        0.10
-    };
+    float sample[4];
+
+    sample[0] = rr_interval;
+    sample[1] = peak_amp;
+    sample[2] = beat_std;
+    sample[3] = beat_energy;
 
     int votes[6] = {0};
 
@@ -60,13 +65,11 @@ int main()
 
     int best = 0;
 
-    for(int i=1;i<6;i++)
+    for(int i = 1; i < 6; i++)
     {
         if(votes[i] > votes[best])
             best = i;
     }
 
-    printf("Predicted Class = %d\n", best);
-
-    return 0;
+    return best;
 }
