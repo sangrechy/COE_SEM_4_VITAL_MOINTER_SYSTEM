@@ -1,6 +1,6 @@
 #include "stress_predict.h"
 
-#include "v2/ml/v1/stress/results/stress_forest_export.c"
+#include "../ml/v1/stress/results/stress_forest_export.c"
 
 static int predict_tree(
     const int *feature,

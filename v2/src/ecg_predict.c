@@ -1,6 +1,6 @@
 #include "ecg_predict.h"
 
-#include "v2/ml/v1/ecg/results/ecg_forest_export.c"
+#include "../ml/v1/ecg/results/ecg_forest_export.c"
 
 static int predict_tree(
     const int *feature,
